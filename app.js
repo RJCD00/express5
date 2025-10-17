@@ -1,16 +1,5 @@
  // app.js
 const express = require('express');
-const app = express();
-
-// aquí van tus rutas, por ejemplo:
-app.get('/', (req, res) => {
-  res.send('Backend Express funcionando correctamente');
-});
-
-app.get('/', (req, res) => {
-  res.send('Backend Express funcionando correctamente');
-});
-const express = require('express');
 const path = require('path');
 const cors = require('cors');
 require('dotenv').config();
@@ -22,6 +11,11 @@ const port = process.env.PORT || 3001;
 
 app.use(cors()); // Permitir requests desde frontend
 app.use(express.json()); // Para parsear JSON en body
+
+// Ruta raíz para probar que backend funciona
+app.get('/', (req, res) => {
+  res.send('Backend Express funcionando correctamente');
+});
 
 app.use('/', entryRoutes); // Usar rutas de entradas
 
