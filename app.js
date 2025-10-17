@@ -1,4 +1,7 @@
  // app.js
+app.get('/', (req, res) => {
+  res.send('Backend Express funcionando correctamente');
+});
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
