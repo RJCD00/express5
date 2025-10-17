@@ -1,4 +1,12 @@
  // app.js
+const express = require('express');
+const app = express();
+
+// aquí van tus rutas, por ejemplo:
+app.get('/', (req, res) => {
+  res.send('Backend Express funcionando correctamente');
+});
+
 app.get('/', (req, res) => {
   res.send('Backend Express funcionando correctamente');
 });
